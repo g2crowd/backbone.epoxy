@@ -587,6 +587,10 @@
         if ($element.length > 1) {
           $element = $element.filter('[value="'+ value +'"]');
         }
+
+        if ($element.length < 1) {
+          return $element;
+        }
         
         // Default as loosely-typed boolean:
         var checked = !!value;
